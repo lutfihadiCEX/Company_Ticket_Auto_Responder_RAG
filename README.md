@@ -17,3 +17,8 @@ This repository contains the backend scripts for an AI powered ticket auto respo
 - Add front end integration or API endpoints
 - Improve retrieval accuracy and handling of out of scope queries
 - Expand KB articles
+
+---
+
+## Note
+This project is intended for learning purposes, exploring the use of LLMs for internal support tools, and is part of my personal portfolio. It demonstrates retrieval augmented generation (RAG) and knowledge base embeddings with ChromaDB. Not production ready.
