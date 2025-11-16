@@ -1,0 +1,1 @@
+Article 32: Title: Re-Subscribing After Cancelling Content: A user can easily re-subscribe by navigating to Account Settings > Subscription Details and clicking the "Reactivate Subscription" button. Their previous plan and billing details will be restored, and billing will begin immediately.

@@ -1,0 +1,1 @@
+Article 35: Title: How to Check System Status and Downtime Content: Check the current operational status of all services on our dedicated Status Page (link to https://www.google.com/search?q=status.service.com). This page provides real-time updates on planned maintenance and unexpected outages.

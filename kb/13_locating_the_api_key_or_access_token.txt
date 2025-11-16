@@ -1,0 +1,1 @@
+Article 13: Title: Locating the API Key or Access Token Content: The user's unique API Key or Access Token is located under Developer Settings > API Keys. They should treat this key as confidential and regenerate it immediately if they suspect it has been compromised. The token is required for all third-party integrations.

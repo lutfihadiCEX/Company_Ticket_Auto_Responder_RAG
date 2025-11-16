@@ -1,0 +1,1 @@
+Article 36: Title: Troubleshooting Browser Compatibility Issues Content: We officially support the latest two versions of Chrome, Firefox, Safari, and Edge. If a user is experiencing layout or functionality issues, ensure they are not using an outdated or unsupported browser like Internet Explorer.

@@ -1,0 +1,1 @@
+Article 08: Title: Failed Login Due to Two-Factor Authentication (2FA) Code Not Working Content: If a 2FA code is rejected, confirm the user's device clock is set correctly and synced as codes are time-sensitive. If they are using an authentication app, they can try to re-sync it. As a last resort, guide them through the account recovery process to disable and re-enable 2FA.

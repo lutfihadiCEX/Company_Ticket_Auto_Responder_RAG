@@ -1,0 +1,1 @@
+Article 09: Title: Understanding Usage Limits and Overage Charges Content: Overage charges occur when a customer exceeds their plan's usage limits, which can be viewed in the Dashboard under Usage Metrics. Explain that the current charges reflect usage from the 1st of the month and advise upgrading the plan to avoid future overages.

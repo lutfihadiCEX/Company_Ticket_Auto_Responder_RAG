@@ -1,0 +1,1 @@
+Article 40: Title: How to Use the Co-Editing Feature Content: Co-editing allows multiple users to work on a document simultaneously. Users must have the correct Editor permissions, and they can invite collaborators by clicking the "Share" button and entering the co-editor's email address.

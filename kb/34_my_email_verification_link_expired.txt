@@ -1,0 +1,1 @@
+Article 34: Title: My Email Verification Link Expired Content: Verification links typically expire after 48 hours for security. Advise the user to return to the application's login page and click the "Resend Verification Email" link to generate a new, valid link.

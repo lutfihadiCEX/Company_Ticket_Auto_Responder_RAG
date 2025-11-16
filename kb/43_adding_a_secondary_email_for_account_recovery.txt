@@ -1,0 +1,1 @@
+Article 43: Title: Adding a Secondary Email for Account Recovery Content: Users can add a secondary email address for account recovery purposes in Account Settings > Security. This provides an alternate method for receiving password reset links if they lose access to their primary email.

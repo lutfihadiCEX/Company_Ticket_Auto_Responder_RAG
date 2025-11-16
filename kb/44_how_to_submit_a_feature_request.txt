@@ -1,0 +1,1 @@
+Article 44: Title: How to Submit a Feature Request Content: Feature requests are submitted via a form in the Help Center or within the app's Feedback section. Encourage users to clearly describe the use case and benefit to help prioritize development.

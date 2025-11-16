@@ -1,0 +1,1 @@
+Article 22: Title: Resolving "Subscription Expired" Message Content: This message appears when a recurring payment has failed and the grace period has ended. Direct the user to Account Settings > Billing to update their payment method immediately. Advise that service will resume automatically once a successful payment is processed.

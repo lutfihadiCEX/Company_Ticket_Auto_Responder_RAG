@@ -1,0 +1,1 @@
+Article 04: Title: Canceling a Subscription Content: To cancel their recurring subscription, the customer needs to go to Account Settings > Subscription Details and click the "Cancel Subscription" button. The subscription will remain active until the end of the current billing cycle. Confirm the cancellation by checking the account status reflects "Pending Cancellation."

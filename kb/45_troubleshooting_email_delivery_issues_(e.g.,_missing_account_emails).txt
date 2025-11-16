@@ -1,0 +1,1 @@
+Article 45: Title: Troubleshooting Email Delivery Issues (e.g., Missing Account Emails) Content: If emails aren't arriving, the customer must whitelist our domain (e.g., @service.com) in their email client. Also, check that their registered email address is spelled correctly in their profile settings.

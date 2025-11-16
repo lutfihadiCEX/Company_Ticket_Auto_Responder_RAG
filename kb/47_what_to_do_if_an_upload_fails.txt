@@ -1,0 +1,1 @@
+Article 47: Title: What to do if an Upload Fails Content: If a file upload fails, ensure the file adheres to the size limit (e.g., 256MB) and is in a supported file format (e.g., PDF, DOCX, JPEG). Network connectivity can also cause failures; advise trying the upload again on a stable connection.

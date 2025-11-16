@@ -1,0 +1,1 @@
+Article 23: Title: Recovering a Deactivated Account Content: If an account was deactivated (by the user or for inactivity), it can often be reactivated within 90 days. Escalate the request to the Account Management team, who will verify the user's identity before initiating the reactivation process. Data recovery is not guaranteed after 90 days.

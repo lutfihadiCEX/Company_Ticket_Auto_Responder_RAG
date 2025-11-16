@@ -1,0 +1,1 @@
+Article 33: Title: Adjusting the Time Zone Setting Content: The time zone for displaying activity logs and scheduled events is managed in Account Settings > Profile. Ensure the user selects the correct geographical zone from the dropdown menu and saves the changes. This affects all time-sensitive data in their account.

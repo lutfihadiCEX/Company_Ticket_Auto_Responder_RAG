@@ -1,0 +1,1 @@
+Article 11: Title: Adjusting Notification Preferences Content: Users can manage all email and in-app notifications by visiting Settings > Notifications. They can toggle specific alert types (e.g., promotional, billing, account activity) on or off. Remind them to click "Save Preferences" at the bottom of the page.

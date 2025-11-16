@@ -1,0 +1,1 @@
+Article 26: Title: Changing the Display Name and Profile Picture Content: The display name and profile picture can be customized in Account Settings > Profile. Images must be in JPG or PNG format and should not exceed 5MB. Remind the user that the display name is public-facing.

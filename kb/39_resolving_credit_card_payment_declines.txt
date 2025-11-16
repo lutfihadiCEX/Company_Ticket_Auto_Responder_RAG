@@ -1,0 +1,1 @@
+Article 39: Title: Resolving Credit Card Payment Declines Content: A payment decline is usually due to the issuing bank or an expired card. Advise the customer to contact their bank to authorize the transaction or to update their card information in the Billing section. We cannot override a bank's decline decision.

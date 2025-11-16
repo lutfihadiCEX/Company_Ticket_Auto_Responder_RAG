@@ -1,0 +1,1 @@
+Article 06: Title: Locating and Downloading Invoices Content: All past invoices are available for download in PDF format under Account Settings > Billing History. Customers can select the relevant month and click the "Download Invoice" button. If an invoice is missing, confirm the payment date and provide a manual PDF copy via the ticket.

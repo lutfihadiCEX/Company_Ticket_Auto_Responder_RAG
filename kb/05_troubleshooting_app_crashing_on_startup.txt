@@ -1,0 +1,1 @@
+Article 05: Title: Troubleshooting App Crashing on Startup Content: For a mobile app crash on launch, instruct the user to first force-close the app and relaunch it. If the crash continues, they should update the app to the latest version from their respective app store. As a final step, advise them to reinstall the app entirely.

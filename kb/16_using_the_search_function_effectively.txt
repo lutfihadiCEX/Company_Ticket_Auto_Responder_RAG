@@ -1,0 +1,1 @@
+Article 16: Title: Using the Search Function Effectively Content: The search bar supports partial matching and boolean operators (AND, OR, NOT). Advise users to enclose exact phrases in quotation marks (e.g., "annual report 2024") for better results. Filters are also available on the left sidebar to narrow down results by date or type.

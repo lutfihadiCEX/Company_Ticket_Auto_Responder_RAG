@@ -1,0 +1,1 @@
+Article 41: Title: How to Clear Local Cache and Cookies Content: Clearing cache and cookies often fixes display and login issues. Guide the customer to their browser's Settings > Privacy/Security section and select the option to clear browsing data, ensuring they select "Cache" and "Cookies."

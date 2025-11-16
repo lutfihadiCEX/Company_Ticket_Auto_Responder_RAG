@@ -1,0 +1,1 @@
+Article 29: Title: What to Do If My Account is Locked Content: An account is locked after five failed login attempts for security. The lock is usually temporary and lifts after 30 minutes. If the user needs immediate access, they must initiate a password reset, which also immediately unlocks the account.

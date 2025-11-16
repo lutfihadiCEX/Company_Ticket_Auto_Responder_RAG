@@ -1,0 +1,1 @@
+Article 50: Title: Requesting Accessibility Support Content: For users requiring accessibility accommodations or experiencing issues with screen readers or keyboard navigation, escalate the ticket to the Product Team and provide the specific accessibility need or standard (e.g., WCAG 2.1) being referenced.

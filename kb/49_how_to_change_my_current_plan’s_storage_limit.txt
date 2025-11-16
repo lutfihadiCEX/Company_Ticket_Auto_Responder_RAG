@@ -1,0 +1,1 @@
+Article 49: Title: How to Change My Current Plan’s Storage Limit Content: Storage limits are determined by the customer's current subscription tier. To increase storage, the user must upgrade their subscription plan via the Subscription Details page (see KB 37). There is no option to purchase storage separately.

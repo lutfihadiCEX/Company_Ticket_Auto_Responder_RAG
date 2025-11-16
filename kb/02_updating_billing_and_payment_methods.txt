@@ -1,0 +1,1 @@
+Article 02: Title: Updating Billing and Payment Methods Content: Customers can update their credit card or payment method by navigating to Account Settings > Billing. Advise them to ensure the new card details (number, expiry, CVV) are entered correctly before clicking Save Changes. A confirmation email is sent once the update is successful.

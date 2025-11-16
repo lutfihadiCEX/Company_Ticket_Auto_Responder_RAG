@@ -1,0 +1,1 @@
+Article 21: Title: Setting Up and Managing User Roles/Permissions Content: Administrators can manage team roles (e.g., Admin, Editor, Viewer) in Team Settings > Users. Explain that only users with Admin rights can invite new members and modify existing permissions. Confirm the user understands the scope of each role.

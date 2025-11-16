@@ -1,0 +1,1 @@
+Article 48: Title: Understanding Security Best Practices Content: Advise customers to use a unique, strong password (over 12 characters, mix of characters), enable Two-Factor Authentication (2FA), and never share their login credentials. Regularly review active sessions in Security Settings.

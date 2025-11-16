@@ -1,0 +1,1 @@
+Article 20: Title: Troubleshooting Broken Image or Asset Links Content: If images or files aren't loading, the issue might be due to a failed upload or incorrect permissions. Ask the user to re-upload the asset if possible. If the asset was uploaded correctly, check the asset's access permissions; it might be set to private.

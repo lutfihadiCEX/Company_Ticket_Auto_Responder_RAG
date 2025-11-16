@@ -1,0 +1,1 @@
+Article 42: Title: Understanding Data Backup and Retention Policy Content: We maintain daily backups of all customer data. Data for deleted accounts or cancelled subscriptions is typically retained for a 90-day grace period before permanent erasure, following our internal data privacy policy.

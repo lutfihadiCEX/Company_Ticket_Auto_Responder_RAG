@@ -1,0 +1,1 @@
+Article 37: Title: How to Upgrade or Downgrade Your Plan Content: Users can modify their service plan (upgrade or downgrade) in Account Settings > Subscription Details. Explain that upgrades are effective immediately, and downgrades take effect at the start of the next billing cycle.

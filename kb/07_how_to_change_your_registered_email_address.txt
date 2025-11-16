@@ -1,0 +1,1 @@
+Article 07: Title: How to Change Your Registered Email Address Content: The registered email address can be updated in Account Settings > Profile. The system requires the user to verify the change by clicking a unique link sent to the new email address. This security step must be completed within 24 hours or the change will be reverted.

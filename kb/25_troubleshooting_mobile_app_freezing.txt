@@ -1,0 +1,1 @@
+Article 25: Title: Troubleshooting Mobile App Freezing Content: When the app freezes, the user should first try waiting 30 seconds for it to recover. If it remains unresponsive, they must clear the app's cache in their device settings (iOS/Android) and restart their phone. Verify the device meets the minimum OS requirements.

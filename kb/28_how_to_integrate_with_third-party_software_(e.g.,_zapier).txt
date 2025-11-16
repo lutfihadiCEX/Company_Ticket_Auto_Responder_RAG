@@ -1,0 +1,1 @@
+Article 28: Title: How to Integrate with Third-Party Software (e.g., Zapier) Content: Integration setup is done via Settings > Integrations. The user must generate an API Key (see KB 13) and input it into the third-party application's connection settings. Provide a link to the specific integration guide in the developer documentation.

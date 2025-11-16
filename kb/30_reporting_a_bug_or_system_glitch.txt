@@ -1,0 +1,1 @@
+Article 30: Title: Reporting a Bug or System Glitch Content: Encourage users to provide as much detail as possible when reporting bugs: device type, operating system, browser, steps to reproduce the error, and screenshots. This allows the engineering team to replicate and fix the issue quickly.
