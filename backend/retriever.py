@@ -2,6 +2,33 @@ import os
 from chromadb import Client
 from chromadb.config import Settings
 from ollama_client import ollama_client
+import re
+
+def chunk_text(text, max_tokens = 300):
+    """
+    Splits long text into chunks overlapping of approximately <max_tokens>.
+    Aim to keep context between chunks
+
+    """
+
+    text = re.sub(r"\s+", " ", text).strip()
+    words = text.split(" ")
+
+    chunks = []
+    current = []
+
+    for word in words:
+        current.append(word)
+
+        if len(current) >= max_tokens:
+            chunks.append(" ".join(current))
+            overlap = int(max_tokens * 0.3)
+            current = current[-overlap:]
+
+    if current:
+        chunks.append(" ".join(current))
+
+    return chunks
 
 kb_folder = r"C:\MLCourse\ticket-auto-responder\kb"
 
@@ -15,7 +42,12 @@ for filename in os.listdir(kb_folder):
         path = os.path.join(kb_folder, filename)
         with open(path, "r", encoding="utf-8") as f:
             text = f.read().strip()
-            documents.append({"id": filename, "text": text})
+            
+            chunks = chunk_text(text)
+
+            for i, chunk in enumerate(chunks):
+                chunk_id = f"{filename}_chunk_{i}"
+                documents.append({"id": chunk_id, "text": chunk})
 
 def embed_text(text: str):
     """
@@ -30,6 +62,7 @@ def embed_text(text: str):
     
     try:
         vector = embedding_resp.embedding  # first try this
+        
     except AttributeError:
         
         vector = embedding_resp.data[0].embedding
@@ -58,8 +91,8 @@ for doc in documents:
     collection.add(
         ids=[doc["id"]],
         documents=[doc["text"]],
-        embeddings=[embedding_vector]
-    )
+        embeddings=[embedding_vector],
+        metadatas=[{"id": doc["id"]}])
 
 def retrieve_documents(query: str, top_k: int = 3) -> list:
     """
@@ -71,5 +104,14 @@ def retrieve_documents(query: str, top_k: int = 3) -> list:
         query_embeddings=[query_embedding],
         n_results=top_k
     )
-    return results["documents"][0]  # list of text
+    docs = results["documents"][0]
+    metas = results.get("metadatas", [[]])[0]
 
+    formatted_results = []
+    for doc, meta in zip(docs, metas):
+        formatted_results.append({
+            "id": meta.get("id", "unknown"),
+            "content": doc
+        })
+
+    return formatted_results

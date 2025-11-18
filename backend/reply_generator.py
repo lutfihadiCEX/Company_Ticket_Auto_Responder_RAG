@@ -23,7 +23,7 @@ def generate_reply(category: str, email_body: str, kb_docs: list) -> str:
             "Best regards,\nYour AI Customer Support Assistant"
         )
 
-    kb_text = "\n".join([doc.strip() for doc in kb_docs])
+    kb_text = "\n".join([doc["content"].strip() for doc in kb_docs])
 
     prompt_text = f"""
     You are an AI customer support assistant.

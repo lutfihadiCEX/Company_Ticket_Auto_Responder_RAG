@@ -16,7 +16,7 @@ class EmailRequest(BaseModel):
 class EmailResponse(BaseModel):
     reply: str
     category: str
-    retrieved_docs: List[str] = []
+    retrieved_docs: List[dict] = []
 
 @app.get("/health")
 def health_check():

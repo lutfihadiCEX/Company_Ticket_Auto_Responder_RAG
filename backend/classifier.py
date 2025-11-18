@@ -2,6 +2,7 @@ from ollama_client import ollama_client
 import json
 
 
+
 ALLOWED_CATEGORIES = [
     "email_verification_issue",
     "login_issue",
