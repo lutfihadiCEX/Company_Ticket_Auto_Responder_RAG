@@ -1,134 +1,602 @@
 [
   {
-    "subject": "Can't log in to my account",
-    "body": "I tried to log in but it keeps saying invalid password.",
+    "subject": "Can't log in to my account - Invalid Credentials",
+    "body": "I'm certain I'm using the right password, but the system keeps saying 'Invalid Credentials'. What should I do? I am trying to log in from Chrome.",
     "sender": "user1@example.com",
     "expected_category": "login_issue"
   },
   {
-    "subject": "Forgot my password",
-    "body": "I want to reset my password but the reset link is not working.",
+    "subject": "Forgot my password, reset link missing",
+    "body": "I used the 'Forgot Password' link 10 minutes ago but the email hasn't arrived. I checked my spam folder.",
     "sender": "user2@example.com",
     "expected_category": "password_reset"
   },
   {
     "subject": "My email verification link expired",
-    "body": "I never received a working verification email.",
+    "body": "I just checked my inbox and realized the verification link for my new account has expired. Can you resend it?",
     "sender": "user3@example.com",
     "expected_category": "email_verification_issue"
   },
   {
-    "subject": "Need a refund",
-    "body": "I was charged twice for my subscription this month. Please refund.",
+    "subject": "Need a refund for accidental annual purchase",
+    "body": "I accidentally selected the annual plan instead of the monthly plan. I need a refund for the difference or the entire amount if possible.",
     "sender": "user4@example.com",
     "expected_category": "subscription_billing"
   },
   {
-    "subject": "Payment declined",
-    "body": "My card was declined while trying to pay for the service.",
+    "subject": "Payment declined while attempting to renew subscription",
+    "body": "I received a notification that my credit card payment failed. I've updated the card details but it still shows 'declined'.",
     "sender": "user5@example.com",
     "expected_category": "payment_failure"
   },
   {
-    "subject": "How to change my email address?",
-    "body": "I need to update the email linked to my account.",
+    "subject": "How to change my registered email address?",
+    "body": "I'm changing my primary work email and need to update the email associated with my account. Where can I find the setting?",
     "sender": "user6@example.com",
     "expected_category": "account_update"
   },
   {
-    "subject": "Feature suggestion: Dark mode",
-    "body": "It would be great if the app had a dark mode option.",
+    "subject": "Feature suggestion: Integration with Google Drive",
+    "body": "It would be extremely helpful if we could link and sync files directly from Google Drive. Please consider adding this integration.",
     "sender": "user7@example.com",
     "expected_category": "feature_request"
   },
   {
-    "subject": "App crashes on upload",
-    "body": "Whenever I upload a file, the app crashes immediately.",
+    "subject": "App crashing on startup on Android 13",
+    "body": "The mobile application crashes immediately after I tap the icon. My phone is running Android 13. I've tried reinstalling it.",
     "sender": "user8@example.com",
     "expected_category": "bug_report"
   },
   {
-    "subject": "How do I reset my API key?",
-    "body": "I can't find the instructions to reset my API key.",
+    "subject": "Locating the API Key",
+    "body": "I need to set up a third-party integration but I cannot locate my API Key in the settings. Where is it stored?",
     "sender": "user9@example.com",
     "expected_category": "general_question"
   },
   {
-    "subject": "Unclear issue",
-    "body": "Something is wrong but I'm not sure what.",
+    "subject": "General system error - 'Error 500'",
+    "body": "I got an 'Error 500' message when trying to access the Dashboard. Not sure what this means.",
     "sender": "user10@example.com",
-    "expected_category": "unknown"
+    "expected_category": "technical_error"
   },
   {
-    "subject": "Can't log in after 2FA",
-    "body": "I completed 2FA but still can't log in to my account.",
+    "subject": "2FA code rejected, can't log in",
+    "body": "My two-factor authentication code from the Google Authenticator app is not being accepted. I'm locked out.",
     "sender": "user11@example.com",
     "expected_category": "login_issue"
   },
   {
-    "subject": "Reset password link expired",
-    "body": "The password reset link I received expired immediately.",
+    "subject": "Password reset link expired immediately",
+    "body": "I clicked the link right away but got a message saying the password reset link has expired. Can you help?",
     "sender": "user12@example.com",
     "expected_category": "password_reset"
   },
   {
-    "subject": "Verification email not received",
-    "body": "I tried signing up but never got a verification email.",
+    "subject": "Email verification not received in inbox or spam",
+    "body": "I signed up two hours ago. I have not received the verification email. It's not in my spam folder.",
     "sender": "user13@example.com",
     "expected_category": "email_verification_issue"
   },
   {
-    "subject": "Upgrade subscription",
-    "body": "I want to upgrade my plan from Basic to Pro.",
+    "subject": "How to upgrade my plan from Pro to Enterprise",
+    "body": "We need to upgrade our team to the Enterprise tier for additional features. What is the process?",
     "sender": "user14@example.com",
     "expected_category": "subscription_billing"
   },
   {
-    "subject": "Card declined error",
-    "body": "I tried paying but my credit card was declined.",
+    "subject": "My payment was declined for an unknown reason",
+    "body": "I know there are funds on my card, but the payment for the monthly subscription failed. The card issuer did not notify me of a decline.",
     "sender": "user15@example.com",
     "expected_category": "payment_failure"
   },
   {
-    "subject": "Change account details",
-    "body": "I want to change my profile picture and email address.",
+    "subject": "Change notification preferences",
+    "body": "I'm receiving too many email notifications. I want to turn off the promotional emails but keep the billing alerts.",
     "sender": "user16@example.com",
     "expected_category": "account_update"
   },
   {
-    "subject": "Request new feature: Multi-language support",
-    "body": "Please add multi-language support for the app.",
+    "subject": "Request: Custom user roles",
+    "body": "We need a feature to define custom user roles beyond the default Admin/Editor/Viewer roles.",
     "sender": "user17@example.com",
     "expected_category": "feature_request"
   },
   {
-    "subject": "Bug: App crashes on logout",
-    "body": "Logging out causes the app to crash unexpectedly.",
+    "subject": "Bug: Image assets not loading on shared link",
+    "body": "When I share a project link, the images and embedded videos are not loading for the recipient. It just shows broken links.",
     "sender": "user18@example.com",
     "expected_category": "bug_report"
   },
   {
-    "subject": "How do I cancel my subscription?",
-    "body": "I want to know how to cancel my subscription.",
+    "subject": "How do I cancel my subscription before the next charge?",
+    "body": "I want to make sure I cancel my subscription before the next renewal date. Where is the cancellation button?",
     "sender": "user19@example.com",
     "expected_category": "general_question"
   },
   {
-    "subject": "Not sure what happened",
-    "body": "I got an error message but I don't understand it.",
+    "subject": "Website extremely slow today",
+    "body": "The site is taking over a minute to load simple pages. Is there a known outage or is the service experiencing high traffic?",
     "sender": "user20@example.com",
-    "expected_category": "unknown"
+    "expected_category": "technical_error"
   },
   {
-    "subject": "Login fails on mobile",
-    "body": "I can log in on desktop but mobile keeps failing.",
+    "subject": "Account locked after failed login attempts",
+    "body": "I tried logging in too many times with the wrong password and now my account is locked. How long until I can try again?",
     "sender": "user21@example.com",
     "expected_category": "login_issue"
   },
   {
-    "subject": "Password reset email missing",
-    "body": "I requested a password reset but didn't get the email.",
+    "subject": "Password reset link not working in Gmail",
+    "body": "I'm using the correct link but clicking it in Gmail does nothing. Should I try a different browser?",
     "sender": "user22@example.com",
     "expected_category": "password_reset"
+  },
+  {
+    "subject": "Can't find the invoice for last month's payment",
+    "body": "I need to download the invoice for the payment made on the 5th of last month for my accounting records.",
+    "sender": "user23@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Unexpected overage charge on my bill",
+    "body": "I see an extra charge on my bill labeled 'Overage Fee'. I thought I was within my plan limits. Can you explain this?",
+    "sender": "user24@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "How to update my credit card details?",
+    "body": "My old credit card is expiring next week. I need instructions on where to update my payment information to the new card.",
+    "sender": "user25@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Change my display name",
+    "body": "My current display name is incorrect. I'd like to update it to my full name, John Smith. Where can I do this?",
+    "sender": "user26@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Request for data export",
+    "body": "I'm closing my account soon. I need a full export of all my stored data and documents before I proceed.",
+    "sender": "user27@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Bug report: Co-editing feature not working",
+    "body": "My collaborator and I can't simultaneously edit a document. It keeps throwing an error message about a lock on the file.",
+    "sender": "user28@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "Where is the documentation for the API?",
+    "body": "I'm trying to find the official documentation for connecting to your API. I need information on endpoints and parameters.",
+    "sender": "user29@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "My discount code is not applying",
+    "body": "I have a new customer discount code 'WELCOME20' but when I enter it at checkout, the price doesn't change.",
+    "sender": "user30@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Login failed due to CAPTCHA issue",
+    "body": "The CAPTCHA keeps failing when I try to log in. I've reset my password but I'm still stuck on the login screen.",
+    "sender": "user31@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "I can't receive password reset email",
+    "body": "My email provider must be blocking your reset emails. I've checked every folder. How can I get access to my account?",
+    "sender": "user32@example.com",
+    "expected_category": "password_reset"
+  },
+  {
+    "subject": "Can you manually verify my account?",
+    "body": "I've been waiting two days for the verification email. Can you manually verify my account so I can start using the service?",
+    "sender": "user33@example.com",
+    "expected_category": "email_verification_issue"
+  },
+  {
+    "subject": "Question about annual vs. monthly pricing",
+    "body": "Is there a difference in features between the annual and monthly billing cycles, or is it just the price?",
+    "sender": "user34@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "How to resolve a payment decline for my business card",
+    "body": "My business credit card was declined. I need to know why, as I need to use the service immediately for work.",
+    "sender": "user35@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "I need to delete my account and data",
+    "body": "I want my account and all associated personal data completely and permanently deleted from your servers.",
+    "sender": "user36@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Feature request: Better search filters",
+    "body": "The current search function is too basic. Could you implement advanced filters like date range and file type filters?",
+    "sender": "user37@example.com",
+    "expected_category": "feature_request"
+  },
+  {
+    "subject": "Technical issue: App freezing on iOS",
+    "body": "The app freezes completely after I open a certain file type. I'm using the latest iOS update.",
+    "sender": "user38@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "How to find tutorial videos",
+    "body": "I'm a new user and want to learn how to use the advanced features. Where can I find video tutorials or training?",
+    "sender": "user39@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Error 404: Page not found when clicking a menu link",
+    "body": "I clicked on the 'Reports' link in the main navigation and received an 'Error 404' page. Is this an internal link error?",
+    "sender": "user40@example.com",
+    "expected_category": "technical_error"
+  },
+  {
+    "subject": "Login issue after reactivating account",
+    "body": "I recovered my deactivated account, but now my login credentials aren't being recognized. Can you check my status?",
+    "sender": "user41@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "Can't complete password reset",
+    "body": "The link took me to a page that required a security question I don't remember. I need another way to reset my password.",
+    "sender": "user42@example.com",
+    "expected_category": "password_reset"
+  },
+  {
+    "subject": "I need to re-verify my email",
+    "body": "I changed my primary email address but never got the verification link. Please advise on how to get it resent.",
+    "sender": "user43@example.com",
+    "expected_category": "email_verification_issue"
+  },
+  {
+    "subject": "Subscription expired unexpectedly",
+    "body": "My account status suddenly says 'Subscription Expired'. I thought I was set up for automatic renewal. What happened?",
+    "sender": "user44@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Unrecognized charge on bank statement",
+    "body": "I see a charge from your company on my bank statement that I don't recall authorizing. What is this $50 charge for?",
+    "sender": "user45@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "How to update team member roles",
+    "body": "I'm an Admin and I need to change one team member's role from 'Editor' to 'Viewer'. How do I manage user roles?",
+    "sender": "user46@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Feature request: Keyboard shortcuts",
+    "body": "Please add more keyboard shortcuts for navigating the application. It would greatly improve workflow speed.",
+    "sender": "user47@example.com",
+    "expected_category": "feature_request"
+  },
+  {
+    "subject": "Bug: Time zone is incorrect in activity logs",
+    "body": "All the activity timestamps in my account are showing the wrong time zone (they are 8 hours off). I need them to reflect EST.",
+    "sender": "user48@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "What is the policy for data retention?",
+    "body": "If I delete my account, how long is my data backed up before it is permanently removed?",
+    "sender": "user49@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "System status check - Slow loading",
+    "body": "Is the system down or is there an ongoing maintenance? My dashboard has been loading very slowly all morning.",
+    "sender": "user50@example.com",
+    "expected_category": "technical_error"
+  },
+  {
+    "subject": "Cannot log in with correct credentials (possible hack)",
+    "body": "I suspect my account may have been compromised. My login is failing even though I'm sure of the password.",
+    "sender": "user51@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "Password reset email went to spam",
+    "body": "I found the password reset email in my spam folder, but by the time I clicked it, the link was invalid.",
+    "sender": "user52@example.com",
+    "expected_category": "password_reset"
+  },
+  {
+    "subject": "How to change from monthly to annual billing",
+    "body": "I want to switch my subscription plan from monthly payments to the annual discounted rate.",
+    "sender": "user53@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Need to downgrade my current subscription plan",
+    "body": "I want to downgrade from the Business plan to the Pro plan. When will this change take effect?",
+    "sender": "user54@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "I cannot update my billing address",
+    "body": "I recently moved and I need to update my billing address for the invoices. I can't find the correct place in settings.",
+    "sender": "user55@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Add secondary email for recovery",
+    "body": "I want to add a secondary email address to my account in case I lose access to my primary one. Where do I set this up?",
+    "sender": "user56@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Feature suggestion: Bulk file downloading",
+    "body": "Allow us to select multiple files and download them as a single ZIP archive. This is essential for my workflow.",
+    "sender": "user57@example.com",
+    "expected_category": "feature_request"
+  },
+  {
+    "subject": "Bug: Failed upload with large file",
+    "body": "Every time I try to upload a file over 200MB, the upload process fails at about 90% completion. Is there a size limit?",
+    "sender": "user58@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "Where is my referral link?",
+    "body": "I want to refer a friend to the service. Where can I find my personal referral link to share?",
+    "sender": "user59@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Need help with accessibility features",
+    "body": "I use a screen reader and am having trouble navigating the menu. Are there specific accessibility settings I can enable?",
+    "sender": "user60@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Login failed after using a new browser",
+    "body": "I tried logging in from Safari (I usually use Chrome) and it failed, saying my credentials were wrong. Why would this happen?",
+    "sender": "user61@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "Trouble receiving password reset email on custom domain",
+    "body": "I use an email with a custom domain and the password reset emails aren't reaching me. How can I whitelist your sending address?",
+    "sender": "user62@example.com",
+    "expected_category": "password_reset"
+  },
+  {
+    "subject": "I need to change my profile picture",
+    "body": "I want to upload a new profile picture. Where is the setting to upload and save the new image?",
+    "sender": "user63@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Why was my subscription cancelled?",
+    "body": "I did not initiate a cancellation, but my account status shows 'Pending Cancellation'. I need this rectified.",
+    "sender": "user64@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Payment issue: Need a temporary suspension of charges",
+    "body": "I'm having a temporary issue with my bank account and need to pause the automatic charges for one month. Is this possible?",
+    "sender": "user65@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "How to report abuse in the community forum",
+    "body": "Another user is posting inappropriate content. How can I report them and their posts?",
+    "sender": "user66@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Feature request: Custom reports generation",
+    "body": "We need the ability to generate custom data reports with specified metrics and date ranges.",
+    "sender": "user67@example.com",
+    "expected_category": "feature_request"
+  },
+  {
+    "subject": "Bug: Notifications are broken",
+    "body": "I am not receiving any in-app or email notifications for account activity even though they are enabled in my settings.",
+    "sender": "user68@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "Where is the documentation for ZAP integration?",
+    "body": "I'm trying to connect your service to Zapier but need a step-by-step guide on the correct process.",
+    "sender": "user69@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Unexpected charge amount",
+    "body": "I was charged $15 more this month than last month for the same plan. Why is there an increased charge?",
+    "sender": "user70@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Trouble logging in after security warning",
+    "body": "I received a security warning email about unusual activity. Now I can't log in. Is my account blocked?",
+    "sender": "user71@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "Password reset link expired due to time zone difference",
+    "body": "I am traveling and the reset link expired quickly. It might be due to a time zone issue. Can this be fixed?",
+    "sender": "user72@example.com",
+    "expected_category": "password_reset"
+  },
+  {
+    "subject": "Resend activation email to new address",
+    "body": "I used the wrong email address to sign up. Can you resend the activation email to my correct address: correct@example.com?",
+    "sender": "user73@example.com",
+    "expected_category": "email_verification_issue"
+  },
+  {
+    "subject": "How to switch back to my previous plan",
+    "body": "I mistakenly upgraded my plan and want to switch back to my previous tier. How can I downgrade immediately?",
+    "sender": "user74@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Card marked as 'expired' but is valid",
+    "body": "The system is saying my card is expired, but the date is next year. Can you manually verify the card details?",
+    "sender": "user75@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Need to remove an old team member",
+    "body": "An employee left the company. I need to know how to remove them from my team's account access immediately.",
+    "sender": "user76@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Request: Option to manually clear cache",
+    "body": "It would be useful to have a button in the app settings to clear the local application cache for troubleshooting.",
+    "sender": "user77@example.com",
+    "expected_category": "feature_request"
+  },
+  {
+    "subject": "Bug: Search results are inconsistent",
+    "body": "Searching for an exact phrase in quotes is sometimes returning irrelevant results or failing to find a known document.",
+    "sender": "user78@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "What is the security policy?",
+    "body": "I'm concerned about security. Where can I read about your platform's security best practices and compliance?",
+    "sender": "user79@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "My account was deactivated by mistake",
+    "body": "My account was marked as 'inactive' and deactivated. I need it recovered as soon as possible.",
+    "sender": "user80@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Can't log in after enabling 2FA",
+    "body": "I enabled two-factor authentication, and now the backup codes and the app codes don't work. I'm completely locked out.",
+    "sender": "user81@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "Password reset link not arriving (Hotmail)",
+    "body": "I've tried resetting my password multiple times. I'm using a Hotmail account and the email is never delivered.",
+    "sender": "user82@example.com",
+    "expected_category": "password_reset"
+  },
+  {
+    "subject": "Missing email verification link after sign-up",
+    "body": "I successfully signed up, but the account is unusable because I haven't received the verification link to activate it.",
+    "sender": "user83@example.com",
+    "expected_category": "email_verification_issue"
+  },
+  {
+    "subject": "Question about current usage limits",
+    "body": "I want to check how close I am to hitting my plan's usage limits for storage and bandwidth. Where can I view these metrics?",
+    "sender": "user84@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Card decline during a large payment",
+    "body": "I'm trying to pay a large annual fee, and the card is being declined. It might be my bank's fraud protection.",
+    "sender": "user85@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "How to change the time zone setting",
+    "body": "The displayed times for all events are wrong. I need to change my account's time zone setting to PST.",
+    "sender": "user86@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Feature request: Integration with Slack",
+    "body": "An integration that posts notifications about new activity directly into a Slack channel would be fantastic.",
+    "sender": "user87@example.com",
+    "expected_category": "feature_request"
+  },
+  {
+    "subject": "Bug: App crash when trying to access Billing History",
+    "body": "Whenever I click on 'Billing History' in the account settings, the entire application shuts down unexpectedly.",
+    "sender": "user88@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "How to contact the sales team?",
+    "body": "I'm interested in the Enterprise plan but need to speak to a sales representative first. How do I get in touch?",
+    "sender": "user89@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Trouble with browser compatibility (old version of Edge)",
+    "body": "I'm using an older version of Microsoft Edge and the entire interface looks jumbled. Is my browser supported?",
+    "sender": "user90@example.com",
+    "expected_category": "technical_error"
+  },
+  {
+    "subject": "Login failed after clearing browser cache",
+    "body": "I cleared my browser's cache to fix a display issue, and now I can't log in at all. It keeps rejecting my credentials.",
+    "sender": "user91@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "Need to manually resend password reset email",
+    "body": "I clicked the link 20 minutes ago but it wasn't valid. Please trigger another password reset link to my account.",
+    "sender": "user92@example.com",
+    "expected_category": "password_reset"
+  },
+  {
+    "subject": "Still awaiting verification email 3 days later",
+    "body": "It's been 3 days since I signed up and no verification email. I can't access my account. What is the delay?",
+    "sender": "user93@example.com",
+    "expected_category": "email_verification_issue"
+  },
+  {
+    "subject": "How to download last year's invoices in bulk",
+    "body": "I need to download all the invoices from the previous fiscal year for tax purposes. Can I download them all at once?",
+    "sender": "user94@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Payment issue: I need to use PayPal instead of credit card",
+    "body": "I want to switch my recurring payment method from my credit card to my verified PayPal account. How do I do this?",
+    "sender": "user95@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "How to recover a deleted account",
+    "body": "I accidentally deleted my account last month. Is it possible to recover the account and the associated data?",
+    "sender": "user96@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Feature suggestion: More storage options",
+    "body": "I need a minor increase in storage without upgrading to the next tier. Could you offer a small storage add-on purchase?",
+    "sender": "user97@example.com",
+    "expected_category": "feature_request"
+  },
+  {
+    "subject": "Bug report: Error 503 on data processing",
+    "body": "I receive an 'Error 503 Service Unavailable' message whenever I try to run a heavy data processing task.",
+    "sender": "user98@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "Can I re-subscribe easily after cancelling?",
+    "body": "I cancelled my subscription a few weeks ago but now want to rejoin the service. Can I reactivate my old account?",
+    "sender": "user99@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "The application keeps timing out",
+    "body": "The system frequently times out, and I have to log in repeatedly. My internet connection is stable.",
+    "sender": "user100@example.com",
+    "expected_category": "technical_error"
   }
 ]

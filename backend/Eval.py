@@ -3,7 +3,7 @@ from sklearn.metrics import classification_report, accuracy_score, confusion_mat
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv("evaluation_results.csv")  # make sure this path points to your file
+df = pd.read_csv(r"C:\MLCourse\ticket-auto-responder\backend\evaluation_results.csv")  # make sure this path points to your file
 
 overall_accuracy = df['hit'].mean()
 print(f"Overall Hit Accuracy: {overall_accuracy:.4f}\n")

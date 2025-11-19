@@ -14,7 +14,7 @@ ALLOWED_CATEGORIES = [
     "feature_request",
     "bug_report",
     "general_question",
-    "unknown"
+    "technical_error"
 ]
 
 
