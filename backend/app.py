@@ -42,11 +42,20 @@ def process_email(req: EmailRequest):
         logger.info(f"Category: {category}, Classifier Confidence: {classifier_conf:.2f}")
         
         kb_docs = retrieve_documents(req.body, top_k=3)
-        retrieval_conf = max([doc.get("similarity", 0) for doc in kb_docs], default=0)
-        logger.info(f"Retrieved {len(kb_docs)} KB docs, Max Retrieval Confidence: {retrieval_conf:.2f}")
+        raw_scores = [doc.get("similarity", 0.0) for doc in kb_docs]
+        max_retrieval = max(raw_scores) if raw_scores else 0.0
 
-        overall_confidence = classifier_conf * retrieval_conf
-        logger.info(f"Overall Confidence: {overall_confidence:.2f}")
+        normalized_retrieval = max_retrieval ** 2
+
+        logger.info(
+            f"Retrieved {len(kb_docs)} KB docs | "
+            f"Raw Retrieval: {max_retrieval:.2f} | Normalized: {normalized_retrieval:.2f}"
+        )
+        top_similarity = max([doc.get("similarity", 0.0) for doc in kb_docs])
+
+        overall_confidence = round(
+        0.7 * classifier_conf + 0.3 * top_similarity, 4) 
+        logger.info(f"Final Confidence Score: {overall_confidence:.2f}")
 
         reply = generate_reply(category, req.body, kb_docs)
         logger.info(f"Generated reply: {reply[:200]}")

@@ -3,6 +3,7 @@ from chromadb import Client
 from chromadb.config import Settings
 from ollama_client import ollama_client
 import re
+import math
 
 def chunk_text(text, max_tokens = 300):
     """
@@ -106,16 +107,16 @@ def retrieve_documents(query: str, top_k: int = 3) -> list:
     )
     docs = results["documents"][0]
     metas = results.get("metadatas", [[]])[0]
-    raw_scores = results.get("distances", [[]])[0]  # or wherever your similarity is
-    max_score = max(raw_scores, default=1)
-    min_score = min(raw_scores, default=0)
+    raw_distances = results.get("distances", [[]])[0]
+
+    exp_scores = [math.exp(-d) for d in raw_distances]
+    sum_exp = sum(exp_scores)
 
     formatted_results = []
-    for doc, meta, score in zip(docs, metas, raw_scores):
-        if max_score != min_score:
-            similarity = (score - min_score) / (max_score - min_score)
-        else:
-            similarity = 1.0  # all same scores
+    for doc, meta, dist, exp_s in zip(docs, metas, raw_distances, exp_scores):
+
+        similarity = exp_s / sum_exp
+
         formatted_results.append({
             "id": meta.get("id", "unknown"),
             "content": doc,
