@@ -6,6 +6,7 @@ from retriever import retrieve_documents
 from reply_generator import generate_reply
 from logging_config import logger
 from logging_utils import log_ticket
+from fastapi import APIRouter
 
 
 app = FastAPI()
@@ -76,3 +77,8 @@ def process_email(req: EmailRequest):
     except Exception as e:
         logger.error(f"ERROR: {str(e)}")
         raise e
+
+@app.get("/evaluate")
+def run_evaluation():
+    import evaluate
+    return {"status": "evaluation done, results saved to evaluation_results.csv"}
