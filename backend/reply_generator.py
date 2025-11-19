@@ -26,28 +26,31 @@ def generate_reply(category: str, email_body: str, kb_docs: list) -> str:
     kb_text = "\n".join([doc["content"].strip() for doc in kb_docs])
 
     prompt_text = f"""
-    You are an AI customer support assistant.
+    You are a highly professional Customer Support AI Assistant.
+    Your task is to write a response email based strictly on the retrieved knowledge base (KB) content.
 
-    The ticket category is: {category}
-    The customer email is: "{email_body}"
+    ## RULES
+    - Use only the information provided in the KB chunks below.
+    - Do NOT add any steps or details that are not explicitly stated in the KB.
+    - If the KB lacks relevant information, politely state that the information is unavailable.
+    - The reply must be helpful, polite, and clear.
+    - Do NOT mention that KB chunks were used.
+    - Write the reply in a natural, customer-friendly tone.
+    - Include a short subject line.
 
-    Use ONLY the relevant information from the knowledge base documents below:
+    ## CUSTOMER EMAIL
+    {email_body}
 
-    --- KB DOCUMENTS START ---
+    ## CATEGORY
+    {category}
+
+    ## RETRIEVED KB CHUNKS
     {kb_text}
-    --- KB DOCUMENTS END ---
 
-    Write a professional email reply that includes:
-    - Greeting
-    - Understanding of user's issue
-    - Steps/solution based on the KB documents
-    - Offer extra assistance if needed
-    - Closing & signature
+    ## TASK
+    Write a complete reply email addressing the customer's request using only the KB content.
 
-    If the KB does NOT contain the answer, reply:
-    "Hello, thank you for reaching out. We are looking into your request and will respond shortly."
-
-"""
+    """
 
     response = ollama_client.generate(model="gemma2:9b", prompt=prompt_text)
 
