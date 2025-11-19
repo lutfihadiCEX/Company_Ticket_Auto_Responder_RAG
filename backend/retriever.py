@@ -106,12 +106,20 @@ def retrieve_documents(query: str, top_k: int = 3) -> list:
     )
     docs = results["documents"][0]
     metas = results.get("metadatas", [[]])[0]
+    raw_scores = results.get("distances", [[]])[0]  # or wherever your similarity is
+    max_score = max(raw_scores, default=1)
+    min_score = min(raw_scores, default=0)
 
     formatted_results = []
-    for doc, meta in zip(docs, metas):
+    for doc, meta, score in zip(docs, metas, raw_scores):
+        if max_score != min_score:
+            similarity = (score - min_score) / (max_score - min_score)
+        else:
+            similarity = 1.0  # all same scores
         formatted_results.append({
             "id": meta.get("id", "unknown"),
-            "content": doc
+            "content": doc,
+            "similarity": similarity
         })
 
     return formatted_results

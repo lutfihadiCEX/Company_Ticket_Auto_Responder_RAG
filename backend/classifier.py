@@ -1,5 +1,6 @@
 from ollama_client import ollama_client
 import json
+import math
 
 
 
@@ -18,90 +19,50 @@ ALLOWED_CATEGORIES = [
 
 
 
-def classify_ticket(subject: str, body: str) -> str:
+def classify_ticket(subject: str, body: str) -> tuple[str, float]:
     """
-    Process ticket category based on email subject and body.
-
+    Returns:
+        category: predicted category string
+        confidence: float (0.0 - 1.0) based on model scores
     """
-
     prompt_text = f"""
+    
+You are a strict customer support ticket classifier.
+Classify the email into ONE category from: {ALLOWED_CATEGORIES}
+Return JSON ONLY in this format: {{"category": "<category>", "scores": {{category_name: score}}}}
 
-You are a strict customer support ticket classifier. 
-Your job is to categorize the user's issue into ONE of the following categories:
-
-- email_verification_issue   → expired link, missing verification email, can't verify account
-- login_issue                → can't log in, invalid credentials, 2FA issues
-- password_reset             → forgot password, reset not working
-- subscription_billing       → subscription, cancel, refund, invoice, upgrade, downgrade
-- payment_failure            → card declined, payment error, transaction failed
-- account_update             → change email, update profile, delete account
-- feature_request            → asking for new features
-- bug_report                 → errors, crashes, something not working
-- general_question           → anything that doesn't fit categories above
-- unknown                    → unclear or insufficient info
-
-Return ONLY JSON: {{"category": "<category>"}}
-
-### Examples ###
-Email: "My email verification link expired"
-Category: email_verification_issue
-
-Email: "I want to cancel my subscription"
-Category: subscription_billing
-
-Email: "Your app crashes when uploading files"
-Category: bug_report
-
-Email: "How do I change my email address?"
-Category: account_update
-
-Email: "My credit card was declined"
-Category: payment_failure
-
-Now classify this email:
-
-Subject: {subject}
-Body: {body}
-
-
-    """
+Email Subject: {subject}
+Email Body: {body}
+"""
 
     response = ollama_client.generate(model="gemma2:9b", prompt=prompt_text)
 
-    
-    response_text = ""
-    if hasattr(response, "content"):
-        response_text = response.content
-    elif hasattr(response, "response"):
-        response_text = response.response
-    elif isinstance(response, str):
-        response_text = response
-    else:
-        response_text = "{}"
+    response_text = getattr(response, "content", getattr(response, "response", "{}"))
 
-    
     try:
         first_brace = response_text.find("{")
         last_brace = response_text.rfind("}") + 1
         json_part = response_text[first_brace:last_brace]
         data = json.loads(json_part)
+
         category = data.get("category", "general_question")
+        scores = data.get("scores", {})
+
+        def softmax(scores_dict):
+            exps = {k: math.exp(v) for k, v in scores_dict.items()}
+            total = sum(exps.values())
+            return {k: v/total for k, v in exps.items()}
+
+        
+        scores_norm = softmax(scores)
+
+        confidence = scores_norm.get(category, 0.75)
+
     except Exception:
         category = "general_question"
+        confidence = 0.75
 
-    
     if category not in ALLOWED_CATEGORIES:
         category = "general_question"
-
-
-    low_conf_keywords = ["Maybe", "Not Sure", "Possibly", "Unclear", "Confusing"]
-    text_lower = (subject + " " + body).lower()
-
-    if category == "general_question":
-        confidence = 0.55
-    elif any(word in text_lower for word in low_conf_keywords):
-        confidence = 0.65
-    else:
-        confidence = 0.85
-
+    
     return category, confidence

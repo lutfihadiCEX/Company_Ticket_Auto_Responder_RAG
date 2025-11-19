@@ -38,13 +38,16 @@ def process_email(req: EmailRequest):
     """
 
     try:
-        category, confidence = classify_ticket(req.subject, req.body)
-        logger.info(f"Category: {category}, Confidence: {confidence}")
+        category, classifier_conf = classify_ticket(req.subject, req.body)
+        logger.info(f"Category: {category}, Classifier Confidence: {classifier_conf:.2f}")
         
         kb_docs = retrieve_documents(req.body, top_k=3)
-        logger.info(f"Retrieved {len(kb_docs)} KB docs")
+        retrieval_conf = max([doc.get("similarity", 0) for doc in kb_docs], default=0)
+        logger.info(f"Retrieved {len(kb_docs)} KB docs, Max Retrieval Confidence: {retrieval_conf:.2f}")
 
-        
+        overall_confidence = classifier_conf * retrieval_conf
+        logger.info(f"Overall Confidence: {overall_confidence:.2f}")
+
         reply = generate_reply(category, req.body, kb_docs)
         logger.info(f"Generated reply: {reply[:200]}")
 
@@ -53,13 +56,13 @@ def process_email(req: EmailRequest):
             subject=req.subject,
             body=req.body,
             category=category,
-            confidence=confidence,
+            confidence=overall_confidence,
             kb_docs=kb_docs,
             reply=reply
         )
 
 
-        return EmailResponse(reply=reply, category=category, confidence=confidence, retrieved_docs=kb_docs)
+        return EmailResponse(reply=reply, category=category, confidence=overall_confidence, retrieved_docs=kb_docs)
 
     except Exception as e:
         logger.error(f"ERROR: {str(e)}")
