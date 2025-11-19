@@ -93,4 +93,15 @@ Body: {body}
     if category not in ALLOWED_CATEGORIES:
         category = "general_question"
 
-    return category
+
+    low_conf_keywords = ["Maybe", "Not Sure", "Possibly", "Unclear", "Confusing"]
+    text_lower = (subject + " " + body).lower()
+
+    if category == "general_question":
+        confidence = 0.55
+    elif any(word in text_lower for word in low_conf_keywords):
+        confidence = 0.65
+    else:
+        confidence = 0.85
+
+    return category, confidence

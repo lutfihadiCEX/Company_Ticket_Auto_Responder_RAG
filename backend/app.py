@@ -4,6 +4,9 @@ from typing import List
 from classifier import classify_ticket
 from retriever import retrieve_documents
 from reply_generator import generate_reply
+from logging_config import logger
+from logging_utils import log_ticket
+
 
 app = FastAPI()
 
@@ -16,6 +19,7 @@ class EmailRequest(BaseModel):
 class EmailResponse(BaseModel):
     reply: str
     category: str
+    confidence: float = None
     retrieved_docs: List[dict] = []
 
 @app.get("/health")
@@ -33,16 +37,30 @@ def process_email(req: EmailRequest):
     3. Generate professional reply
     """
 
-    
-    category = classify_ticket(req.subject, req.body)
+    try:
+        category, confidence = classify_ticket(req.subject, req.body)
+        logger.info(f"Category: {category}, Confidence: {confidence}")
+        
+        kb_docs = retrieve_documents(req.body, top_k=3)
+        logger.info(f"Retrieved {len(kb_docs)} KB docs")
 
-    
-    kb_docs = retrieve_documents(req.body, top_k=3)
+        
+        reply = generate_reply(category, req.body, kb_docs)
+        logger.info(f"Generated reply: {reply[:200]}")
 
-    
-    reply = generate_reply(category, req.body, kb_docs)
+        log_ticket(
+            sender=req.sender,
+            subject=req.subject,
+            body=req.body,
+            category=category,
+            confidence=confidence,
+            kb_docs=kb_docs,
+            reply=reply
+        )
 
-    
-    # log_ticket(req.sender, req.subject, category, kb_docs, reply)
 
-    return EmailResponse(reply=reply, category=category, retrieved_docs=kb_docs)
+        return EmailResponse(reply=reply, category=category, confidence=confidence, retrieved_docs=kb_docs)
+
+    except Exception as e:
+        logger.error(f"ERROR: {str(e)}")
+        raise e
