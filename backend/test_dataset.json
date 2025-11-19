@@ -1,0 +1,134 @@
+[
+  {
+    "subject": "Can't log in to my account",
+    "body": "I tried to log in but it keeps saying invalid password.",
+    "sender": "user1@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "Forgot my password",
+    "body": "I want to reset my password but the reset link is not working.",
+    "sender": "user2@example.com",
+    "expected_category": "password_reset"
+  },
+  {
+    "subject": "My email verification link expired",
+    "body": "I never received a working verification email.",
+    "sender": "user3@example.com",
+    "expected_category": "email_verification_issue"
+  },
+  {
+    "subject": "Need a refund",
+    "body": "I was charged twice for my subscription this month. Please refund.",
+    "sender": "user4@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Payment declined",
+    "body": "My card was declined while trying to pay for the service.",
+    "sender": "user5@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "How to change my email address?",
+    "body": "I need to update the email linked to my account.",
+    "sender": "user6@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Feature suggestion: Dark mode",
+    "body": "It would be great if the app had a dark mode option.",
+    "sender": "user7@example.com",
+    "expected_category": "feature_request"
+  },
+  {
+    "subject": "App crashes on upload",
+    "body": "Whenever I upload a file, the app crashes immediately.",
+    "sender": "user8@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "How do I reset my API key?",
+    "body": "I can't find the instructions to reset my API key.",
+    "sender": "user9@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Unclear issue",
+    "body": "Something is wrong but I'm not sure what.",
+    "sender": "user10@example.com",
+    "expected_category": "unknown"
+  },
+  {
+    "subject": "Can't log in after 2FA",
+    "body": "I completed 2FA but still can't log in to my account.",
+    "sender": "user11@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "Reset password link expired",
+    "body": "The password reset link I received expired immediately.",
+    "sender": "user12@example.com",
+    "expected_category": "password_reset"
+  },
+  {
+    "subject": "Verification email not received",
+    "body": "I tried signing up but never got a verification email.",
+    "sender": "user13@example.com",
+    "expected_category": "email_verification_issue"
+  },
+  {
+    "subject": "Upgrade subscription",
+    "body": "I want to upgrade my plan from Basic to Pro.",
+    "sender": "user14@example.com",
+    "expected_category": "subscription_billing"
+  },
+  {
+    "subject": "Card declined error",
+    "body": "I tried paying but my credit card was declined.",
+    "sender": "user15@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Change account details",
+    "body": "I want to change my profile picture and email address.",
+    "sender": "user16@example.com",
+    "expected_category": "account_update"
+  },
+  {
+    "subject": "Request new feature: Multi-language support",
+    "body": "Please add multi-language support for the app.",
+    "sender": "user17@example.com",
+    "expected_category": "feature_request"
+  },
+  {
+    "subject": "Bug: App crashes on logout",
+    "body": "Logging out causes the app to crash unexpectedly.",
+    "sender": "user18@example.com",
+    "expected_category": "bug_report"
+  },
+  {
+    "subject": "How do I cancel my subscription?",
+    "body": "I want to know how to cancel my subscription.",
+    "sender": "user19@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Not sure what happened",
+    "body": "I got an error message but I don't understand it.",
+    "sender": "user20@example.com",
+    "expected_category": "unknown"
+  },
+  {
+    "subject": "Login fails on mobile",
+    "body": "I can log in on desktop but mobile keeps failing.",
+    "sender": "user21@example.com",
+    "expected_category": "login_issue"
+  },
+  {
+    "subject": "Password reset email missing",
+    "body": "I requested a password reset but didn't get the email.",
+    "sender": "user22@example.com",
+    "expected_category": "password_reset"
+  }
+]
