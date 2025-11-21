@@ -598,5 +598,185 @@
     "body": "The system frequently times out, and I have to log in repeatedly. My internet connection is stable.",
     "sender": "user100@example.com",
     "expected_category": "technical_error"
+  },
+  {
+    "subject": "Card Declined: Payment keeps failing",
+    "body": "I have tried three times now to complete my monthly purchase but my card is declined every single time. There are definitely funds available. What is the actual error code I should give to my bank? This is extremely frustrating!",
+    "sender": "frustrateduser@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "New credit card details not saving",
+    "body": "I'm trying to update my billing information because my old card expired. I enter the new details and click 'Save,' but when I refresh the page, the old card is still listed. Please assist, as my service will be interrupted soon.",
+    "sender": "newcardholder@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Unexpected charge failure after successful months",
+    "body": "My recurring payment failed today for the first time after 12 successful months. I have not changed anything on my card. Could you please check if there is an issue on your side preventing the charge from going through?",
+    "sender": "longtermuser@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Help! Checkout page says 'Unauthorized Transaction'",
+    "body": "I am trying to purchase the 'Premium' plan right now, but the payment gateway returns an 'Unauthorized Transaction' error message. I've used this Visa card everywhere else today without a problem.",
+    "sender": "vipbuyer@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Need to process payment manually, card keeps declining",
+    "body": "Hello, I can't complete the payment online. My bank seems to be automatically blocking the transaction as potential fraud. Is there any way I can make a payment over the phone, or receive a manual invoice link to pay through a different channel?",
+    "sender": "manualpay@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "My transaction keeps failing",
+    "body": "Every time I click 'Confirm Payment' it just kicks me back to the cart page. Help me.",
+    "sender": "shortmessage@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Payment gateway error: PayPal issue",
+    "body": "I attempted to pay using PayPal, but I received a gateway error right after authorizing the payment on the PayPal website. I checked my PayPal activity, and no charge was registered.",
+    "sender": "paypaluser@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Urgent: Card listed as expired but expiry is next year",
+    "body": "Please review my billing details immediately. The system is showing my active card as expired, but the expiry date is 08/2026. This is causing my subscription renewal to fail. Thank you for your prompt attention.",
+    "sender": "urgentbilling@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "My subscription was cancelled because of a payment issue",
+    "body": "I just received an email saying my subscription was cancelled due to a payment failure. I was not notified beforehand. Please advise how I can immediately reactivate the account and successfully process the outstanding payment.",
+    "sender": "reactivate@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Unable to complete purchase",
+    "body": "I'm trying to upgrade my plan and purchase the $299 annual service, but the payment section loads indefinitely after submitting my CVV.",
+    "sender": "loadingerror@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Issue with corporate card transaction",
+    "body": "Our corporate card is failing the security check on your platform. We have confirmed with our finance department that all international transactions are permitted and the card is active. What security parameters are causing the block?",
+    "sender": "corporateuser@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Can't complete purchase",
+    "body": "It's not working.",
+    "sender": "verybrief@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Transaction failed, please review",
+    "body": "My transaction keeps failing when I try to pay using the credit card on file. I'm worried about losing access. Can someone look into the specific reason for the decline and communicate it to me?",
+    "sender": "concerneduser@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Why is my payment not going through?",
+    "body": "I've tried multiple cards and my purchase still won't go through. Is this a system outage? I can't complete my purchase and I need to start using the service now.",
+    "sender": "multiattempt@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Security hold on my bank account for payment",
+    "body": "My bank informed me that they placed a temporary security hold on the transaction amount due to your platform being flagged as unusual. I need to know the specific payment processor name and transaction ID so I can clear the hold with them.",
+    "sender": "bankhold@example.com",
+    "expected_category": "payment_failure"
+  },
+  {
+    "subject": "Where can I find the user manual?",
+    "body": "I'm looking for the comprehensive user manual or documentation to understand all the features. Where is the best place to find this, please?",
+    "sender": "newbie@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "How to adjust notification preferences",
+    "body": "I'd like to adjust which emails I receive from you. I can't seem to find the general settings page to manage my notification preferences.",
+    "sender": "notifications@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "What is your data retention policy?",
+    "body": "Could you please provide documentation outlining your data retention and privacy policy, specifically regarding deleted accounts? I need to know how long backups are maintained.",
+    "sender": "dataprivacy@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Where are the video tutorials?",
+    "body": "Do you have a YouTube channel or a dedicated page with video tutorials? I find visual guides easier to follow than written documentation.",
+    "sender": "visuallearner@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Question about API limits",
+    "body": "My API usage is increasing. I just need to quickly find the documentation that clearly states the rate limits and request quotas for the Pro plan. Thanks.",
+    "sender": "developerquery@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "How do I use the referral program?",
+    "body": "I would like to refer a colleague to your service. Where can I locate my unique referral link and what are the benefits of the referral program?",
+    "sender": "referralseeker@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Do you offer any educational discounts?",
+    "body": "I am a student working on a non-profit project. Could you let me know if there are any special educational pricing or discount programs available for university students?",
+    "sender": "student@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Can you recommend a third-party integration tool?",
+    "body": "We are trying to connect your service to our marketing automation platform. Do you have a list of recommended or officially supported third-party tools for integration?",
+    "sender": "integrationhelp@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "What file types are supported?",
+    "body": "I'm planning to upload several large design files. I need to know all the supported file formats (e.g., JPEG, PNG, PDF, AI, PSD) and the maximum file size limit.",
+    "sender": "filetypes@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Regarding the co-editing feature",
+    "body": "Hello support team. I have a question about the co-editing feature: specifically, what user permissions are required for someone to be able to simultaneously edit a shared document?",
+    "sender": "coediting@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "How to report inappropriate content?",
+    "body": "I saw some content in the public area that I believe violates your terms of service. What is the correct procedure for reporting abuse and inappropriate materials?",
+    "sender": "contentmoderator@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Where is the API documentation?",
+    "body": "I'm looking for the documentation for the API, please.",
+    "sender": "dev@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Can I use this on Firefox?",
+    "body": "Is your application compatible with the latest version of the Firefox browser? I usually avoid Chrome.",
+    "sender": "firefoxuser@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "Question about the search bar",
+    "body": "Does the search function support boolean operators like AND/OR? I'm trying to refine my searches and need to know the capabilities of the search feature.",
+    "sender": "searchquery@example.com",
+    "expected_category": "general_question"
+  },
+  {
+    "subject": "What are the rules for display names?",
+    "body": "Are there any restrictions on what I can use as my public display name? For example, are special characters or emojis allowed?",
+    "sender": "displayname@example.com",
+    "expected_category": "general_question"
   }
 ]
