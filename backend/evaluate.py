@@ -5,10 +5,10 @@ import csv
 from tqdm import tqdm
 import os
 
-dataset_path = r"C:\MLCourse\ticket-auto-responder\backend\test_dataset.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-base_dir = os.path.dirname(os.path.abspath(__file__))
-output_file = os.path.join(base_dir, "evaluation_results.csv")
+dataset_path = os.path.join(BASE_DIR, "test_dataset.json")
+output_file = os.path.join(BASE_DIR, "evaluation_results.csv")
 
 with open(dataset_path, "r", encoding="utf-8") as f:
     test_emails = json.load(f)

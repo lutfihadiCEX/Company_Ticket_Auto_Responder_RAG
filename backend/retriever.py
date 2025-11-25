@@ -30,8 +30,9 @@ def chunk_text(text, max_tokens = 300):
         chunks.append(" ".join(current))
 
     return chunks
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-kb_folder = r"C:\MLCourse\ticket-auto-responder\kb"
+kb_folder = os.path.join(BASE_DIR, "../kb")
 
 if not os.path.exists(kb_folder):
     raise FileNotFoundError(f"KB folder not found at: {kb_folder}")
