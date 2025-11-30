@@ -63,45 +63,42 @@ This diagram illustrates the separation of concerns: the Classification step run
 ```mermaid
 graph TD
     subgraph Client["Client / Source"]
-        U[User / Email Source]
-        P[Postman / Swagger UI]
+        U["User / Email Source"]
+        P["Postman / Swagger UI"]
     end
 
     subgraph Backend["Backend (FastAPI)"]
-        API[app.py / API Endpoints]
-        C[classifier.py (Classification)]
-        R[retriever.py (RAG Retrieval)]
-        G[reply_generator.py (LLM Generation)]
-        L[logging_utils.py]
+        API["app.py / API Endpoints"]
+        C["classifier.py (Classification)"]
+        R["retriever.py (RAG Retrieval)"]
+        G["reply_generator.py (LLM Generation)"]
+        L["logging_utils.py"]
     end
 
-    subgraph Data Stores
-        V[ChromaDB (Vector Store)]
-        K[KB Text Files]
+    subgraph DataStores
+        V["ChromaDB (Vector Store)"]
+        K["KB Text Files"]
     end
 
     U --> API
     P --> API
 
-    % 1. Classification
-    API -- Email Payload --> C
-    C -- Predicted Category --> API
+    API -- "Email Payload" --> C
+    C -- "Predicted Category" --> API
 
-    % 2. Retrieval (RAG)
-    API -- Email Body & Category --> R
+    API -- "Email Body & Category" --> R
     R --> V
     V --> K
 
-    % 3. Generation
-    R -- Retrieved Context --> G
-    G -- Augmented Prompt --> G
-    G -- Final Reply --> API
+    R -- "Retrieved Context" --> G
+    G -- "Augmented Prompt" --> G
+    G -- "Final Reply" --> API
 
-    % 4. Logging
     API --> L
 
     classDef LLM fill:#e6e6ff,stroke:#6666ff;
     class C,G LLM;
+
 ```
 
 ## Demo
