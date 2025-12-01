@@ -210,6 +210,7 @@ uvicorn backend.app:app --reload
 The service will be live at http://localhost:8000. You can access the interactive Swagger UI documentation at http://localhost:8000/docs to test the /process_email endpoint immediately. You can also test the API through Postman to send email requests
 
 **Example Request Body**
+
 Use this sample request body in Swagger UI or Postman (Body -> raw) section to test the /process_email endpoint.
 
 ```json
