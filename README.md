@@ -208,6 +208,19 @@ uvicorn backend.app:app --reload
 
 The service will be live at http://localhost:8000. You can access the interactive Swagger UI documentation at http://localhost:8000/docs to test the /process_email endpoint immediately. You can also test the API through Postman to send email requests
 
+**Example Request Body**
+
+```json
+
+{
+  "subject": "Probem in checkout. Page says 'Unauthorized Transaction'",
+  "body": "I am trying to purchase the available plan through the app, but the payment gateway returns an 'Unauthorized Transaction' error message. I've used this card elsewhere today without having any problems.",
+  "sender": "JohnDoe@maistri.com"
+}
+
+```
+Paste this JSON into Swagger UI or Postman (Body -> raw) section to test the /process_email endpoint.
+
 6. Evaluation
 
 ```bash
